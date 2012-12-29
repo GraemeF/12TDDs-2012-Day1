@@ -21,6 +21,10 @@ describe('stats', function() {
       result = stats([5]);
     });
 
+    it('should have minimum of 5', function() {
+      result.minimum.should.equal(5);
+    });
+    
     it('should average 5', function() {
       result.average.should.equal(5);
     });
