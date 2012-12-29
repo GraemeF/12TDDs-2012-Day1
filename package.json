@@ -1,0 +1,26 @@
+{
+  "name": "12TDDs-2012-Day1",
+  "version": "0.0.0",
+  "description": "Day 1 of the 12 TDD's of Christmas 2012.",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "~1.4.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.7.4",
+    "chai": "~1.4.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GraemeF/12TDDs-2012-Day1.git"
+  },
+  "keywords": [
+    "12tdds"
+  ],
+  "author": "Graeme Foster",
+  "license": "MIT",
+  "gitHead": "1b0a3cae4fc79aea36245da40967c0b7f29c3e03"
+}
