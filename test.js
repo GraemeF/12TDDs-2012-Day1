@@ -21,6 +21,10 @@ describe('stats', function() {
       result = stats([5]);
     });
 
+    it('should have 1 element', function() {
+      result.elements.should.equal(1);
+    });
+
     it('should have minimum of 5', function() {
       result.minimum.should.equal(5);
     });
