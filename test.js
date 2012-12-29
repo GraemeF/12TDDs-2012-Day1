@@ -24,6 +24,10 @@ describe('stats', function() {
     it('should have minimum of 5', function() {
       result.minimum.should.equal(5);
     });
+
+    it('should have maximum of 5', function() {
+      result.maximum.should.equal(5);
+    });
     
     it('should average 5', function() {
       result.average.should.equal(5);

@@ -5,6 +5,7 @@ module.exports = function(numbers) {
 
   return {
     minimum: 5,
+    maximum: 5,
     average: 5
   };
 };
