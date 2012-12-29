@@ -32,9 +32,33 @@ describe('stats', function() {
     it('should have maximum of 5', function() {
       result.maximum.should.equal(5);
     });
-    
+
     it('should average 5', function() {
       result.average.should.equal(5);
+    });
+  });
+
+  describe('given [50, 40, 30]', function() {
+    var result;
+
+    beforeEach(function() {
+      result = stats([50, 40, 30]);
+    });
+
+    it('should have 3 elements', function() {
+      result.elements.should.equal(3);
+    });
+
+    it('should have minimum of 30', function() {
+      result.minimum.should.equal(30);
+    });
+
+    it('should have maximum of 50', function() {
+      result.maximum.should.equal(50);
+    });
+
+    it('should average 40', function() {
+      result.average.should.equal(40);
     });
   });
 });
