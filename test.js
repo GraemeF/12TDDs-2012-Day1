@@ -14,51 +14,43 @@ describe('stats', function() {
 
   });
 
-  describe('given [5]', function() {
-    var result;
+  var describeExpectationsForStats = function(numbers, expected) {
+      describe('given ' + JSON.stringify(numbers), function() {
+        var result;
 
-    beforeEach(function() {
-      result = stats([5]);
-    });
+        beforeEach(function() {
+          result = stats(numbers);
+        });
 
-    it('should have 1 element', function() {
-      result.elements.should.equal(1);
-    });
+        it('should have ' + expected.elements + ' element(s)', function() {
+          result.elements.should.equal(expected.elements);
+        });
 
-    it('should have minimum of 5', function() {
-      result.minimum.should.equal(5);
-    });
+        it('should have minimum of ' + expected.minimum, function() {
+          result.minimum.should.equal(expected.minimum);
+        });
 
-    it('should have maximum of 5', function() {
-      result.maximum.should.equal(5);
-    });
+        it('should have maximum of ' + expected.maximum, function() {
+          result.maximum.should.equal(expected.maximum);
+        });
 
-    it('should average 5', function() {
-      result.average.should.equal(5);
-    });
+        it('should average ' + expected.average, function() {
+          result.average.should.equal(expected.average);
+        });
+      });
+    };
+
+  describeExpectationsForStats([5], {
+    minimum: 5,
+    maximum: 5,
+    average: 5,
+    elements: 1
   });
 
-  describe('given [50, 40, 30]', function() {
-    var result;
-
-    beforeEach(function() {
-      result = stats([50, 40, 30]);
-    });
-
-    it('should have 3 elements', function() {
-      result.elements.should.equal(3);
-    });
-
-    it('should have minimum of 30', function() {
-      result.minimum.should.equal(30);
-    });
-
-    it('should have maximum of 50', function() {
-      result.maximum.should.equal(50);
-    });
-
-    it('should average 40', function() {
-      result.average.should.equal(40);
-    });
+  describeExpectationsForStats([50, 40, 30], {
+    minimum: 30,
+    maximum: 50,
+    average: 40,
+    elements: 3
   });
 });
